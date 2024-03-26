@@ -2,6 +2,7 @@
 
 # Use INPUT_<INPUT_NAME> to get the value of an input
 GREETING="Hello, $CONTAINER_NAMES!"
+cat "$GITHUB_EVENT_PATH"
 
 # Get the list of changed files using `github.event`
 changed_files=$(jq -r '.commits[].added + .commits[].modified + .commits[].removed' "$GITHUB_EVENT_PATH")

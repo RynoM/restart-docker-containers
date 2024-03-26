@@ -50,7 +50,7 @@ jobs:
           CONTAINER_NAMES: Homeassistant
         run: |
           docker run \
-            --env CONTAINER_NAMES="${{ env.CONTAINER_NAMES }}" \
+            --env container-names="${{ env.CONTAINER_NAMES }}" \
             --rm ${{ env.TEST_TAG }}
 
   test-action:
