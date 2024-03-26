@@ -1,6 +1,8 @@
 # Set the base image to use for subsequent instructions
 FROM alpine:3.19
 
+RUN apk add --no-cache git
+
 # Set the working directory inside the container
 WORKDIR /usr/src
 

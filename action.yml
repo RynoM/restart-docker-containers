@@ -1,21 +1,15 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Retart Docker Containers'
+description: 'Restarting docker containers if their files changed'
+author: 'Ryno Marree'
 
 # Define your inputs here.
 inputs:
-  who-to-greet:
-    description: 'Your input description here'
+  container-names:
+    description: 'Names of the docker containers to restart'
     required: true
-    default: 'World'
-
-# Define your outputs here.
-outputs:
-  greeting:
-    description: 'Your output description here'
 
 runs:
   using: docker
   image: Dockerfile
   env:
-    INPUT_WHO_TO_GREET: ${{ inputs.who-to-greet }}
+    CONTAINER_NAMES: ${{ inputs.container-names }}
