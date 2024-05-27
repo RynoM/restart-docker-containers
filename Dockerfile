@@ -1,5 +1,5 @@
 # Set the base image to use for subsequent instructions
-FROM alpine:3.19
+FROM alpine:3.20
 
 RUN apk add --no-cache git jq
 
